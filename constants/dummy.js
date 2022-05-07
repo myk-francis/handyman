@@ -257,4 +257,226 @@ const reviewsData = [
   },
 ]
 
-export { NFTData, servicesData, reviewsData };
+const stories = [
+  {
+    id: 1,
+    caption: "2022 TRENDS IN BRICK",
+    subCaption: "BRICK",
+    uri: "https://media.istockphoto.com/photos/brick-wall-picture-id497944862?b=1&k=20&m=497944862&s=170667a&w=0&h=Fm5cJDh74st0zuSJ_SW78l8GXu5cfkfCCmjQmrTTr6U="
+  },
+  {
+    id: 2,
+    caption: "PRICE OF METAL SKYROCKETS",
+    subCaption: "INCREASING WORK FEE",
+    uri: "https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 3,
+    caption: "HOW TO BECOME A ",
+    subCaption: "HANDYMAN?",
+    uri: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  },
+]
+
+const popular = [
+  {
+    id: 1,
+    name: "METALLURGY MIKE",
+    price: "30,000 tzs",
+    uri: "https://media.istockphoto.com/photos/rolled-metal-warehouse-many-packs-of-metal-bars-on-the-shelves-picture-id1344231216?b=1&k=20&m=1344231216&s=170667a&w=0&h=QzA3Bx2rqkTMH8qMaHOyasuWCrFK0tJuGmqG0DDcnjU="
+  },
+  {
+    id: 2,
+    name: "PAUL THE PLUMMER",
+    price: "30,000 tzs",
+    uri: "https://images.unsplash.com/photo-1521207418485-99c705420785?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXIlMjB0YXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 3,
+    name: "LILY THE CLEANER",
+    price: "30,000 tzs",
+    uri: "https://media.istockphoto.com/photos/cleaner-wearing-a-facemask-while-cleaning-the-buttons-of-an-elevator-picture-id1312481751?b=1&k=20&m=1312481751&s=170667a&w=0&h=9TuylzDNBRJr7Gxif0bZjTjqfs-Xkv_8JLCuYhV9z7s="
+  },
+]
+
+const categories = [
+  {
+    title: "Stories",
+    horizontal: true,
+    data: [
+      {
+        id: 1,
+        title: "Stories",
+        caption: "2022 TRENDS IN BRICK",
+        subCaption: "BRICK",
+        uri: "https://media.istockphoto.com/photos/brick-wall-picture-id497944862?b=1&k=20&m=497944862&s=170667a&w=0&h=Fm5cJDh74st0zuSJ_SW78l8GXu5cfkfCCmjQmrTTr6U="
+      },
+      {
+        id: 2,
+        title: "Stories",
+        caption: "PRICE OF METAL SKYROCKETS",
+        subCaption: "INCREASING WORK FEE",
+        uri: "https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        id: 3,
+        title: "Stories",
+        caption: "HOW TO BECOME A ",
+        subCaption: "HANDYMAN?",
+        uri: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      },
+    ],
+  },
+  {
+    title: "Popular",
+    horizontal: true,
+    data: [
+      {
+        id: 1,
+        title: "Popular",
+        name: "METALLURGY MIKE",
+        price: "30,000 tzs",
+        uri: "https://media.istockphoto.com/photos/rolled-metal-warehouse-many-packs-of-metal-bars-on-the-shelves-picture-id1344231216?b=1&k=20&m=1344231216&s=170667a&w=0&h=QzA3Bx2rqkTMH8qMaHOyasuWCrFK0tJuGmqG0DDcnjU="
+      },
+      {
+        id: 2,
+        title: "Popular",
+        name: "PAUL THE PLUMMER",
+        price: "30,000 tzs",
+        uri: "https://images.unsplash.com/photo-1521207418485-99c705420785?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXIlMjB0YXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        id: 3,
+        title: "Popular",
+        name: "LILY THE CLEANER",
+        price: "30,000 tzs",
+        uri: "https://media.istockphoto.com/photos/cleaner-wearing-a-facemask-while-cleaning-the-buttons-of-an-elevator-picture-id1312481751?b=1&k=20&m=1312481751&s=170667a&w=0&h=9TuylzDNBRJr7Gxif0bZjTjqfs-Xkv_8JLCuYhV9z7s="
+      },
+    ],
+  },
+  {
+    title: "Cleaning",
+    horizontal: true,
+    data: [
+      {
+        id: 1,
+        title: "Cleaning",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 2,
+        title: "Cleaning",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 3,
+        title: "Cleaning",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 4,
+        title: "Cleaning",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 5,
+        title: "Cleaning",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      },
+    ],
+  },
+  {
+    title: "Painting",
+    horizontal: true,
+    data: [
+      {
+        id: 1,
+        title: "Painting",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 2,
+        title: "Painting",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 3,
+        title: "Painting",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 4,
+        title: "Painting",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 5,
+        title: "Painting",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      },
+    ],
+  },
+  {
+    title: "Design",
+    horizontal: true,
+    data: [
+      {
+        id: 1,
+        title: "Design",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 2,
+        title: "Design",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 3,
+        title: "Design",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 4,
+        title: "Design",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      },
+      {
+        id: 5,
+        title: "Design",
+        name: "MIKE",
+        price: "30,000 tzs",
+        uri: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      },
+    ],
+  },
+]
+
+export { NFTData, servicesData, reviewsData, stories, popular, categories };

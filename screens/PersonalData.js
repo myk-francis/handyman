@@ -114,7 +114,6 @@ const PersonalData = () => {
         <View style={styles.editScreenBottom}>
           {editScreen === "Profile" ? ProfileFields() : BioFields()}
         </View>
-        
       </Animated.View>
     )
   }

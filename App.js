@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer, DefaultTheme} from '@react-navigation/native'
 import 'react-native-gesture-handler';
 import { useFonts } from 'expo-font'
-import {Home, Details, GoalsHome, StartPage, AuthScreen, Account, Services, Reviews, PersonalData} from './screens'
+import {Home, Details, GoalsHome, StartPage, AuthScreen, Account, Services, Reviews, PersonalData, Discovery} from './screens'
 
 const Stack = createStackNavigator()
 
@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <NavigationContainer theme={theme}>
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='PersonalData'>
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='Discovery'>
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="GoalsHome" component={GoalsHome}/>
         <Stack.Screen name="Details" component={Details}/>
@@ -39,6 +39,7 @@ const App = () => {
         <Stack.Screen name="Services" component={Services}/>
         <Stack.Screen name="Reviews" component={Reviews}/>
         <Stack.Screen name="PersonalData" component={PersonalData}/>
+        <Stack.Screen name="Discovery" component={Discovery}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

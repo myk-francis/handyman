@@ -14,6 +14,7 @@ export default function NavBar({selected}) {
   }
 
   return (
+    //TODO: MAYBE THIS SHOULD ONLY BRING ONE PARENT VIEW
     <View>
       <View style={styles.iconView}>
         <TouchableOpacity style={styles.icon} onPress={()=> handlePress("Home")}>

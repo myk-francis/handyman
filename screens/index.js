@@ -7,6 +7,7 @@ import Account from './Account'
 import Services from './Services'
 import Reviews from './Reviews'
 import PersonalData from './PersonalData'
+import Discovery from './Discovery'
 
 
 export {
@@ -19,4 +20,5 @@ export {
   Services,
   Reviews,
   PersonalData,
+  Discovery,
 };

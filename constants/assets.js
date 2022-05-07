@@ -22,6 +22,8 @@ import logoOne from "../assets/images/logoOne.png";
 import backgroundPicOne from "../assets/images/backgroundPicOne.jpg";
 import userUnknownAvatar from "../assets/images/userUnknownAvatar.png";
 import personAvatar from "../assets/images/personAvatar.png";
+import menuIcon from "../assets/images/MenuIcon.png";
+import profileIcon from "../assets/images/ProfileIcon.png";
 
 export default {
   badge,
@@ -48,4 +50,6 @@ export default {
   backgroundPicOne,
   userUnknownAvatar,
   personAvatar,
+  menuIcon,
+  profileIcon,
 };
