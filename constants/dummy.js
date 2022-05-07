@@ -282,20 +282,56 @@ const popular = [
   {
     id: 1,
     name: "METALLURGY MIKE",
-    price: "30,000 tzs",
+    description: "General Handyman",
     uri: "https://media.istockphoto.com/photos/rolled-metal-warehouse-many-packs-of-metal-bars-on-the-shelves-picture-id1344231216?b=1&k=20&m=1344231216&s=170667a&w=0&h=QzA3Bx2rqkTMH8qMaHOyasuWCrFK0tJuGmqG0DDcnjU="
   },
   {
     id: 2,
-    name: "PAUL THE PLUMMER",
-    price: "30,000 tzs",
+    name: "PAUL THE PLUMBER",
+    description: "Plumbr",
     uri: "https://images.unsplash.com/photo-1521207418485-99c705420785?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXIlMjB0YXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
   },
   {
     id: 3,
     name: "LILY THE CLEANER",
-    price: "30,000 tzs",
+    description: "Cleanser 3000",
     uri: "https://media.istockphoto.com/photos/cleaner-wearing-a-facemask-while-cleaning-the-buttons-of-an-elevator-picture-id1312481751?b=1&k=20&m=1312481751&s=170667a&w=0&h=9TuylzDNBRJr7Gxif0bZjTjqfs-Xkv_8JLCuYhV9z7s="
+  },
+  {
+    id: 4,
+    name: "YODA PHONE GUY",
+    description: "Tv and Electronics",
+    uri: "https://images.unsplash.com/photo-1548094891-c4ba474efd16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGhvbmUlMjBzZXJ2aWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 5,
+    name: "THE WIRE",
+    description: "Smart Homes",
+    uri: "https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2lyZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 6,
+    name: "THE MOVERS",
+    description: "Moving",
+    uri: "https://media.istockphoto.com/photos/professional-movers-moving-up-on-staircase-and-carrying-large-box-picture-id1312764313?b=1&k=20&m=1312764313&s=170667a&w=0&h=pxH_idKYtLUmAmS_fiKkEYScM_pvXXM3gXOgX65wWDE="
+  },
+  {
+    id: 7,
+    name: "CLEANING COOPER",
+    description: "Cleaning",
+    uri: "https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2xlYW5pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 8,
+    name: "QUEEN MOVERS",
+    description: "Moving",
+    uri: "https://images.unsplash.com/flagged/photo-1594051723870-48f4782c3971?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW92ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 9,
+    name: "DESIGN WHISPERER",
+    description: "Designing",
+    uri: "https://media.istockphoto.com/photos/focused-cute-stylish-african-american-female-student-with-afro-picture-id1311107708?b=1&k=20&m=1311107708&s=170667a&w=0&h=9I2i47JWO0Tof4wbomb9kRxoOXJZJvS8awg6NHFDHco="
   },
 ]
 
@@ -370,7 +406,7 @@ const categories = [
         title: "Cleaning",
         name: "MIKE",
         price: "30,000 tzs",
-        uri: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        uri: 'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       },
       {
         id: 3,
@@ -391,7 +427,7 @@ const categories = [
         title: "Cleaning",
         name: "MIKE",
         price: "30,000 tzs",
-        uri: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+        uri: 'https://images.unsplash.com/photo-1484863137850-59afcfe05386?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       },
     ],
   },
@@ -445,7 +481,7 @@ const categories = [
         title: "Design",
         name: "MIKE",
         price: "30,000 tzs",
-        uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        uri: 'https://images.unsplash.com/photo-1481437642641-2f0ae875f836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       },
       {
         id: 2,
@@ -459,14 +495,14 @@ const categories = [
         title: "Design",
         name: "MIKE",
         price: "30,000 tzs",
-        uri: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        uri: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       },
       {
         id: 4,
         title: "Design",
         name: "MIKE",
         price: "30,000 tzs",
-        uri: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+        uri: 'https://images.unsplash.com/photo-1523464862212-d6631d073194?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       },
       {
         id: 5,

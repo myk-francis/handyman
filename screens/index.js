@@ -8,6 +8,7 @@ import Services from './Services'
 import Reviews from './Reviews'
 import PersonalData from './PersonalData'
 import Discovery from './Discovery'
+import Popular from './Popular'
 
 
 export {
@@ -21,4 +22,5 @@ export {
   Reviews,
   PersonalData,
   Discovery,
+  Popular,
 };

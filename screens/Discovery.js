@@ -1,11 +1,8 @@
 import { StyleSheet, Text, View, SafeAreaView, StatusBar, Image, TouchableOpacity, ImageBackground, FlatList, SectionList } from 'react-native'
-import { NormalButton, NavBar, } from "../components/need_a_hand"
-import React from 'react'
-import { COLORS, SIZES, FONTS, assets, stories, popular, categories} from "../constants"
+import { NavBar } from "../components/need_a_hand"
+import { assets } from "../constants"
 
-const image = { uri: "https://media.istockphoto.com/photos/brick-wall-picture-id497944862?b=1&k=20&m=497944862&s=170667a&w=0&h=Fm5cJDh74st0zuSJ_SW78l8GXu5cfkfCCmjQmrTTr6U=" }
-
-const Discovery = () => {
+const Discovery = ({categories}) => {
 
   const HeaderNav = () => { 
     return(
@@ -78,7 +75,8 @@ const Discovery = () => {
             if (section.horizontal) {
               return null;
             }
-            return SectionItem(section)
+            //return SectionItem(section) here you return a single component that displays 
+            // a single card in a vertical direction
           }}
         />
       </View>
@@ -92,9 +90,6 @@ const Discovery = () => {
       <View style={styles.topView}>
         {HeaderNav()}
         {ListSection()}
-        <View style={styles.bottom}>
-          <NavBar selected={"Home"}/>
-        </View>
       </View>
     </SafeAreaView>
   )
@@ -105,7 +100,7 @@ export default Discovery
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
+    marginTop: 10,
   },
   backgroundView: {
     flex: 1,
@@ -129,7 +124,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   middle: {
-    height: "80%",
+    height: "90%",
     padding: 10
   }, 
   storiesView: {
@@ -240,7 +235,5 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: "bold",
   },
-  bottom: {
-    height: "10%",
-  },
+  
 })
