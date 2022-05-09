@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer, DefaultTheme} from '@react-navigation/native'
 import 'react-native-gesture-handler';
 import { useFonts } from 'expo-font'
-import {Home, Details, GoalsHome, StartPage, AuthScreen, Account, Services, Reviews, PersonalData, Discovery, Popular} from './screens'
+import {Home, Details, GoalsHome, StartPage, AuthScreen, Account, Services, Reviews, PersonalData, Profile} from './screens'
 
 const Stack = createStackNavigator()
 
@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <NavigationContainer theme={theme}>
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='Home'>
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='GoalsHome'>
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="GoalsHome" component={GoalsHome}/>
         <Stack.Screen name="Details" component={Details}/>
@@ -39,11 +39,10 @@ const App = () => {
         <Stack.Screen name="Services" component={Services}/>
         <Stack.Screen name="Reviews" component={Reviews}/>
         <Stack.Screen name="PersonalData" component={PersonalData}/>
-        <Stack.Screen name="Discovery" component={Discovery}/>
-        <Stack.Screen name="Popular" component={Popular}/>
+        <Stack.Screen name="Profile" component={Profile}/>
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 export default App

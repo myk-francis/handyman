@@ -47,7 +47,6 @@ export default Liked
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: 10,
   },
   backgroundView: {
     flex: 1,

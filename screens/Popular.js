@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, FlatList } from 'react-native'
+import { TouchableOpacity, StyleSheet, Text, View, SafeAreaView, TextInput, Image, FlatList } from 'react-native'
 import { HeaderNav } from "../components/need_a_hand"
 import { assets, SIZES } from "../constants"
 import React from "react"
+import { useNavigation } from "@react-navigation/native"
 
 
 const Popular = ({ isFetching, popularData, handleSearch, onRefresh }) => {
+  const navigation = useNavigation()
 
   const ListHeader = () => { 
     return(
@@ -23,11 +25,11 @@ const Popular = ({ isFetching, popularData, handleSearch, onRefresh }) => {
 
   const ListItem = (item) => { 
     return(
-      <View style={styles.personCard}>
+      <TouchableOpacity style={styles.personCard} onPress={()=> navigation.navigate("Profile", { popularDetails: item })}>
         <Image source={{ uri: item.uri}} resizeMode="cover" style={styles.personUrlBackground}></Image> 
         <Text style={styles.personCaption}>{item.name}</Text>
         <Text style={styles.personPrice}>{item.description}</Text>
-      </View>
+      </TouchableOpacity>
     )
   }
 
@@ -60,7 +62,6 @@ export default Popular
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: 10,
   },
   backgroundView: {
     flex: 1,

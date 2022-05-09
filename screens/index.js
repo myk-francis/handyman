@@ -9,6 +9,7 @@ import Reviews from './Reviews'
 import PersonalData from './PersonalData'
 import Discovery from './Discovery'
 import Popular from './Popular'
+import Profile from './Profile'
 
 
 export {
@@ -23,4 +24,5 @@ export {
   PersonalData,
   Discovery,
   Popular,
-};
+  Profile,
+}

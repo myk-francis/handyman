@@ -74,7 +74,6 @@ export default Cart
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: 10,
   },
   backgroundView: {
     flex: 1,
@@ -139,7 +138,7 @@ const styles = StyleSheet.create({
   bottomView: {
     width: "100%",
     position: "absolute",
-    bottom: 0,
+    bottom: 10,
     paddingVertical: SIZES.font,
     justifyContent: "center",
     alignItems: "center",
@@ -158,7 +157,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    //height: 150,
     height: "15%",
     width: "100%",
     backgroundColor: "#D9CDBF",

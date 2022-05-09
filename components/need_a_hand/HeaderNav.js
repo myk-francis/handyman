@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, View, Image } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, StatusBar } from 'react-native'
 import { assets } from "../../constants"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
@@ -21,12 +21,12 @@ export default HeaderNav
 
 const styles = StyleSheet.create({
   top: {
-    height: "10%",
+    height: "8%",
     width: "100%",
     flexDirection: "row",
-    alignItems: "flex-end",
     justifyContent: "space-between",
     padding: 10,
+    marginTop: StatusBar.currentHeight
   },
   menuIcon: {
     height: 30,

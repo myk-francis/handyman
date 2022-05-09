@@ -1,21 +1,8 @@
 import { StyleSheet, Text, View, SafeAreaView, StatusBar, Image, TouchableOpacity, ImageBackground, FlatList, SectionList } from 'react-native'
-import { NavBar } from "../components/need_a_hand"
+import { HeaderNav } from "../components/need_a_hand"
 import { assets } from "../constants"
 
 const Discovery = ({categories}) => {
-
-  const HeaderNav = () => { 
-    return(
-      <View style={styles.top}>
-        <TouchableOpacity>
-          <Image source={assets.menuIcon} style={{ width: 30, height: 30 }}/>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image source={assets.profileIcon} style={{ width: 40, height: 40 }}/>
-        </TouchableOpacity>
-      </View>
-    )
-  }
 
   const ListItem = (item) => { 
     if (item.title === "Stories") {
@@ -88,7 +75,7 @@ const Discovery = ({categories}) => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.backgroundView}></View>
       <View style={styles.topView}>
-        {HeaderNav()}
+        <HeaderNav/>
         {ListSection()}
       </View>
     </SafeAreaView>
@@ -100,7 +87,6 @@ export default Discovery
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: 10,
   },
   backgroundView: {
     flex: 1,
@@ -116,13 +102,7 @@ const styles = StyleSheet.create({
     flex: 1,
     zIndex: 0,
   },
-  top: {
-    height: "10%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 10
-  },
+  
   middle: {
     height: "90%",
     padding: 10

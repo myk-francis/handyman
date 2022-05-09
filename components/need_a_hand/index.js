@@ -1,4 +1,4 @@
-import {Button, NormalButton} from "./Button"
+import {Button, NormalButton, CircleLikeButton, CircleBackButton} from "./Button"
 import NavBar from "./NavBar"
 import HeaderNav from "./HeaderNav"
 
@@ -8,4 +8,6 @@ export {
   NormalButton,
   NavBar,
   HeaderNav,
+  CircleLikeButton,
+  CircleBackButton
 }
