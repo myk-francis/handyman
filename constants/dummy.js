@@ -257,25 +257,88 @@ const reviewsData = [
   },
 ]
 
-const stories = [
+const likesData = [
   {
     id: 1,
-    caption: "2022 TRENDS IN BRICK",
-    subCaption: "BRICK",
+    name: "METALLURGY MIKE",
+    price: "10,000 tzs",
+    service: "Lock Installation",
     uri: "https://media.istockphoto.com/photos/brick-wall-picture-id497944862?b=1&k=20&m=497944862&s=170667a&w=0&h=Fm5cJDh74st0zuSJ_SW78l8GXu5cfkfCCmjQmrTTr6U="
   },
   {
     id: 2,
-    caption: "PRICE OF METAL SKYROCKETS",
-    subCaption: "INCREASING WORK FEE",
+    name: "PAUL THE PLUMBER",
+    price: "10,000 tzs",
+    service: "Sink Fixing",
     uri: "https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
   },
   {
     id: 3,
-    caption: "HOW TO BECOME A ",
-    subCaption: "HANDYMAN?",
+    name: "METALLURGY MIKE",
+    price: "10,000 tzs",
+    service: "Lock Installation",
     uri: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  }, 
+  {
+    id: 4,
+    name: "METALLURGY MIKE",
+    price: "10,000 tzs",
+    service: "Lock Installation",
+    uri: "https://media.istockphoto.com/photos/brick-wall-picture-id497944862?b=1&k=20&m=497944862&s=170667a&w=0&h=Fm5cJDh74st0zuSJ_SW78l8GXu5cfkfCCmjQmrTTr6U="
   },
+  {
+    id: 5,
+    name: "PAUL THE PLUMBER",
+    price: "10,000 tzs",
+    service: "Sink Fixing",
+    uri: "https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 6,
+    name: "METALLURGY MIKE",
+    price: "10,000 tzs",
+    service: "Lock Installation",
+    uri: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  }, 
+]
+
+const servicesSelected = [
+  {
+    id: 1,
+    price: "10000",
+    service: "Metal Work",
+    uri: "https://media.istockphoto.com/photos/rolled-metal-warehouse-many-packs-of-metal-bars-on-the-shelves-picture-id1344231216?b=1&k=20&m=1344231216&s=170667a&w=0&h=QzA3Bx2rqkTMH8qMaHOyasuWCrFK0tJuGmqG0DDcnjU="
+  },
+  {
+    id: 2,
+    price: "10000",
+    service: "Sink Fixing",
+    uri: "https://images.unsplash.com/photo-1521207418485-99c705420785?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXIlMjB0YXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 3,
+    price: "10000",
+    service: "Cleaning",
+    uri: "https://media.istockphoto.com/photos/cleaner-wearing-a-facemask-while-cleaning-the-buttons-of-an-elevator-picture-id1312481751?b=1&k=20&m=1312481751&s=170667a&w=0&h=9TuylzDNBRJr7Gxif0bZjTjqfs-Xkv_8JLCuYhV9z7s="
+  }, 
+  {
+    id: 4,
+    price: "10000",
+    service: "Phone Drama",
+    uri: "https://images.unsplash.com/photo-1548094891-c4ba474efd16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGhvbmUlMjBzZXJ2aWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 5,
+    price: "10000",
+    service: "Wiring",
+    uri: "https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2lyZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 6,
+    price: "10000",
+    service: "Moving",
+    uri: "https://media.istockphoto.com/photos/professional-movers-moving-up-on-staircase-and-carrying-large-box-picture-id1312764313?b=1&k=20&m=1312764313&s=170667a&w=0&h=pxH_idKYtLUmAmS_fiKkEYScM_pvXXM3gXOgX65wWDE="
+  }, 
 ]
 
 const popular = [
@@ -515,4 +578,4 @@ const categories = [
   },
 ]
 
-export { NFTData, servicesData, reviewsData, stories, popular, categories };
+export { NFTData, servicesData, reviewsData, likesData, popular, categories, servicesSelected };

@@ -1,23 +1,17 @@
 import * as React from 'react'
 import { Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { popular, categories} from "../constants"
+import { popular, categories, servicesSelected} from "../constants"
 import Popular from './Popular'
 import Discovery from './Discovery'
+import Liked from './Liked'
+import Cart from './Cart'
 
 
 import Foundation from "react-native-vector-icons/Foundation"
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import Ionicons from "react-native-vector-icons/Ionicons"
 import Entypo from "react-native-vector-icons/Entypo"
-
-function Feed() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed!</Text>
-    </View>
-  );
-}
 
 function Profile() {
   return (
@@ -27,19 +21,21 @@ function Profile() {
   );
 }
 
-function Notifications() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
-    </View>
-  );
-}
-
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+  const [modalVisible, setModalVisible] = React.useState(false)
+
+  const [selectedServices, setSelectedServices] = React.useState(servicesSelected)
+
+  const [total, setTotal] = React.useState(0)
+
   const [popularData, setPopular] = React.useState(popular)
   const [isFetching, setFetching] = React.useState(false)
+
+  React.useEffect(() => {
+    setTotal(selectedServices.map(item => parseInt(item.price)).reduce((prev, curr) => prev + curr, 0))
+  }, [selectedServices])
 
   const handleSearch = (value) => {
     if (value.length === 0 || value === "") {
@@ -63,6 +59,9 @@ function MyTabs() {
     setFetching(false)
   }
 
+  const removeService = (id) => {
+    setSelectedServices(selectedServices.filter(item => item.id !== id))
+  }
 
   return (
     <Tab.Navigator
@@ -84,7 +83,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Popular"
-        //component={<Popular handleSearch={handleSearch} isFetching={isFetching} popularData={popularData}/>}
+        //component={Profile}
         children={() => ( <Popular handleSearch={handleSearch} onRefresh={onRefresh} isFetching={isFetching} popularData={popularData}/>)}
         options={{
           tabBarLabel: 'Popular',
@@ -95,7 +94,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Fav"
-        component={Profile}
+        children={() => (<Liked />)}
         options={{
           tabBarLabel: 'Fav',
           tabBarIcon: ({ color, size }) => (
@@ -105,7 +104,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Cart"
-        component={Profile}
+        children={() => (<Cart modalVisible={modalVisible} setModalVisible={setModalVisible} servicesSelected={selectedServices} removeService={removeService} servicesTotal={total} />)}
         options={{
           tabBarLabel: 'Cart',
           tabBarIcon: ({ color, size }) => (

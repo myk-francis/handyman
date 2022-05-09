@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, FlatList } from 'react-native'
 import { HeaderNav } from "../components/need_a_hand"
 import { assets, SIZES } from "../constants"
-import React from "react";
+import React from "react"
 
 
 const Popular = ({ isFetching, popularData, handleSearch, onRefresh }) => {
