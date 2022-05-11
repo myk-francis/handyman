@@ -38,7 +38,7 @@ const Services = () => {
     );
   }
 
-  const Item = (item) => { 
+  const Item = (item) => {
     return (
       <View style={styles.listItem}>
         <View style={styles.textView}>
@@ -54,7 +54,7 @@ const Services = () => {
     )
   }
 
-  const ListFooter = () => { 
+  const ListFooter = () => {
     return (
       <>
         <View style={{borderBottomColor: "#ABABAB", borderBottomWidth: 1,width:"80%"}}/>
@@ -71,16 +71,16 @@ const Services = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        
+
         <View style={styles.backgroundView}></View>
 
         <View style={styles.upperView}>
-          <KeyboardAvoidingView style={styles.upperTitle} behavior={Platform.OS === "ios" ? "padding" : "height"}>
+          {/* <KeyboardAvoidingView style={styles.upperTitle} behavior={Platform.OS === "ios" ? "padding" : "height"}>
             <View style={styles.titleView}>
               <TouchableOpacity><MaterialIcons name="arrow-back-ios" color={"black"} size={25}></MaterialIcons></TouchableOpacity>
               <Text style={styles.titleText}>Services</Text>
             </View>
-          </KeyboardAvoidingView>
+          </KeyboardAvoidingView> */}
           <View style={styles.upperBody}>
             <View style={styles.list}>
               <FlatList
@@ -88,7 +88,7 @@ const Services = () => {
                 renderItem={({ item }) => Item(item)}
                 keyExtractor={(item) => item.id}
                 showsVerticalScrollIndicator={false}
-                ListFooterComponent={services.length < 7 && ListFooter()} 
+                ListFooterComponent={services.length < 7 && ListFooter()}
                 keyboardShouldPersistTaps="always"
               />
             </View>
@@ -104,7 +104,6 @@ export default Services
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
   },
   container: {
     flex: 1
@@ -124,35 +123,26 @@ const styles = StyleSheet.create({
     zIndex: 0,
   },
   upperTitle: {
-    height: "10%", 
+    height: "10%",
     width: "100%",
     alignItems: "center",
   },
   upperBody: {
-    height: "90%", 
+    height: "90%",
     width: "100%",
     alignItems: "center",
     paddingHorizontal : 20,
-  },
-  titleView: {
-    flexDirection: "row", 
-    justifyContent: "space-between", 
-    width: "100%", 
-    padding: 20
-  },
-  titleText: {
-    fontFamily: FONTS.semiBold,
-    fontSize: SIZES.medium,
+    paddingTop: 20,
   },
   list: {
-    width: "100%", 
+    width: "100%",
     backgroundColor: COLORS.white,
     borderRadius: 20,
     alignItems: "center",
   },
   listItem: {
     height: 60,
-    width: 300, 
+    width: 300,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",

@@ -75,7 +75,6 @@ const Discovery = ({categories}) => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.backgroundView}></View>
       <View style={styles.topView}>
-        <HeaderNav/>
         {ListSection()}
       </View>
     </SafeAreaView>
@@ -104,7 +103,7 @@ const styles = StyleSheet.create({
   },
   
   middle: {
-    height: "90%",
+    height: "100%",
     padding: 10
   }, 
   storiesView: {

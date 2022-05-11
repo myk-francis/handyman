@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Animated, Switch, SafeAreaView, StyleSheet, Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
-import { NormalButton, NavBar } from "../components/need_a_hand"
+import { NormalButton } from "../components/need_a_hand"
 import { COLORS, SIZES, FONTS, assets} from "../constants"
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"
 
@@ -126,7 +126,6 @@ export default function Account() {
               <NormalButton minWidth={150} fontSize={SIZES.font} text={"LOG OUT"}/>
             </View>
           </View>
-          <NavBar selected={""}/>
         </View>
         
       </View>
@@ -137,7 +136,6 @@ export default function Account() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
   },
   container: {
     flex: 1

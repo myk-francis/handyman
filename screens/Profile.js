@@ -4,6 +4,7 @@ import { TouchableOpacity, View, Text, SafeAreaView, Image, StatusBar, FlatList,
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 import AntDesign from "react-native-vector-icons/AntDesign"
 import Feather from "react-native-vector-icons/Feather"
+import MaterialIcons from "react-native-vector-icons/MaterialIcons"
 
 import { CircleLikeButton, CircleBackButton } from "../components/need_a_hand"
 import { FocusedStatusBar } from "../components/nft"
@@ -25,6 +26,29 @@ const Profile = ({ route, navigation }) => {
     }
   }
 
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      title: '', 
+      headerStyle: {
+        backgroundColor: 'white', 
+      },
+      headerTintColor: '#fff', 
+      headerTitleStyle: {
+        fontWeight: 'bold', 
+      },
+      headerLeft: () => (
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={{marginLeft: 20}}>
+          <MaterialIcons name="arrow-back-ios" color={"black"} size={25}></MaterialIcons>
+        </TouchableOpacity>
+      ),
+      headerRight: () => (
+        <Text style={{color: 'black', marginRight: 10, fontWeight: "bold", fontSize: 20}}>Reviews</Text>
+      ),
+    })
+  }, [navigation])
+
   const Header = (imageUrl) => ( 
     <View style={{ width: "100%", height: 373 }}>
       <Image
@@ -33,15 +57,9 @@ const Profile = ({ route, navigation }) => {
         style={{ width: "100%", height: "100%" }}
       />
 
-      <CircleBackButton
-        handlePress={() => navigation.goBack()}
-        left={15}
-        top={StatusBar.currentHeight + 10}
-      />
-
       <CircleLikeButton
         right={15}
-        top={StatusBar.currentHeight + 10}
+        top={10}
       />
     </View>
   )

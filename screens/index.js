@@ -10,6 +10,7 @@ import PersonalData from './PersonalData'
 import Discovery from './Discovery'
 import Popular from './Popular'
 import Profile from './Profile'
+import About from './About'
 
 
 export {
@@ -25,4 +26,5 @@ export {
   Discovery,
   Popular,
   Profile,
+  About,
 }

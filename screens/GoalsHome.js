@@ -18,7 +18,7 @@ function Profile() {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Profile!</Text>
     </View>
-  );
+  )
 }
 
 const Tab = createBottomTabNavigator();

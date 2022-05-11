@@ -10,12 +10,6 @@ const Reviews = () => {
   const Header = () => { 
     return (
       <View style={styles.header}>
-        <View style={styles.headerTitle}>
-          <View style={styles.titleView}>
-            <TouchableOpacity><MaterialIcons name="arrow-back-ios" color={"black"} size={25}></MaterialIcons></TouchableOpacity>
-            <Text style={styles.titleText}>Reviews</Text>
-          </View>
-        </View>
         <View style={styles.headerBody}>
           <View style={styles.avatar}>
             <View style={styles.avatarPic}>
@@ -75,7 +69,7 @@ export default Reviews
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
+    //marginTop: StatusBar.currentHeight || 0,
   },
   container: {
     flex: 1
@@ -101,11 +95,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  headerTitle: {
-    height: 80, 
-    width: "100%",
-    alignItems: "center",
-  },
   headerBody: {
     height: "60%", 
     width: "100%",
@@ -119,15 +108,6 @@ const styles = StyleSheet.create({
   avatarTexts: {
     alignItems: "center",
     justifyContent: "space-between",
-  },
-  titleView: {
-    flexDirection: "row", 
-    justifyContent: "space-between", 
-    width: "100%", 
-  },
-  titleText: {
-    fontFamily: FONTS.semiBold,
-    fontSize: SIZES.medium,
   },
   list: {
     height: "70%", 

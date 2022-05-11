@@ -28,7 +28,6 @@ const Liked = () => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.backgroundView}></View>
       <View style={styles.topView}>
-        <HeaderNav/>
         <View style={styles.middle}>
           <FlatList
             data={likesData}
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     zIndex: 0,
   },
   middle: {
-    height: "90%",
+    height: "100%",
     padding: 10
   },
   card: {

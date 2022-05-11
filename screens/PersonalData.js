@@ -19,12 +19,13 @@ const PersonalData = () => {
     const currentDate = selectedDate || dob;
     setDOB(currentDate)
     setShow(false)
-  };
+  }
 
   const showDateMode = (currentMode) => {
     setShow(true)
     setMode(currentMode)
-  };
+  }
+
   const displayDatepicker = () => {
     showDateMode('date')
   }
@@ -47,7 +48,7 @@ const PersonalData = () => {
     Animated.timing(editAnim, {
       toValue: 1,
       duration: 1000,
-      useNativeDriver: true 
+      useNativeDriver: true
     }).start()
 
     setTimeout(() => profileAnim.setValue(0), 1000)
@@ -59,13 +60,13 @@ const PersonalData = () => {
     Animated.timing(profileAnim, {
       toValue: 1,
       duration: 1000,
-      useNativeDriver: true 
+      useNativeDriver: true
     }).start()
 
     setTimeout(() => editAnim.setValue(0), 1000)
   }
 
-  const DatePickerField = () => { 
+  const DatePickerField = () => {
     return (
       <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
         {isDisplayDate && (<DateTimePicker testID="dateTimePicker" value={dob} mode={displaymode} is24Hour={true} display="default" onChange={changeSelectedDate} />)}
@@ -73,7 +74,7 @@ const PersonalData = () => {
     )
   }
 
-  const ProfileFields = () => { 
+  const ProfileFields = () => {
     return (
       <View style={styles.editContainer}>
         <View style={styles.editInputContainer}>
@@ -91,7 +92,7 @@ const PersonalData = () => {
     )
   }
 
-  const BioFields = () => { 
+  const BioFields = () => {
     return (
       <View style={styles.editContainer}>
         <View style={styles.editInputContainer}>
@@ -105,11 +106,11 @@ const PersonalData = () => {
   }
 
 
-  const EditScreen = () => { 
+  const EditScreen = () => {
     return(
       <Animated.View style={{opacity: editAnim, width: "100%"}}>
         <View style={styles.editScreenTop}>
-          {editScreen === "Profile" ? <Text style={styles.editScreenTitleText}>Edit</Text> : <Text style={styles.editScreenTitleText}>What can you tell the community about yourself?</Text>}
+          {editScreen === "Profile" ? <Text style={styles.editScreenTitleText}></Text> : <Text style={styles.editScreenTitleText}>What can you tell the community about yourself?</Text>}
         </View>
         <View style={styles.editScreenBottom}>
           {editScreen === "Profile" ? ProfileFields() : BioFields()}
@@ -118,7 +119,7 @@ const PersonalData = () => {
     )
   }
 
-  const ScreenTitle = (title, icon) => { 
+  const ScreenTitle = (title, icon) => {
     return(
       <View style={{flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
         <TouchableOpacity onPress={()=> showProfileScreen()}><MaterialIcons name={icon} color={"black"} size={25}></MaterialIcons></TouchableOpacity>
@@ -127,7 +128,7 @@ const PersonalData = () => {
     )
   }
 
-  const ProfileItem = (title, description) => { 
+  const ProfileItem = (title, description) => {
     return(
       <TouchableOpacity style={styles.listItem} onPress={()=> showEditScreen("Profile")}>
         <View>
@@ -139,7 +140,7 @@ const PersonalData = () => {
     )
   }
 
-  const ProfileItemFooter = (description) => { 
+  const ProfileItemFooter = (description) => {
     return (
       <>
         <View style={{borderBottomColor: "#ABABAB", borderBottomWidth: 1,width:"80%"}}/>
@@ -153,7 +154,7 @@ const PersonalData = () => {
     )
   }
 
-  const Header = () => { 
+  const Header = () => {
     return(
       <View style={styles.avatar}>
         <View style={styles.avatarPic}>
@@ -167,7 +168,7 @@ const PersonalData = () => {
     )
   }
 
-  const ProfileScreen = () => { 
+  const ProfileScreen = () => {
     return (
       <Animated.View style={{opacity: profileAnim, width: "100%"}}>
         {Header()}
@@ -187,22 +188,22 @@ const PersonalData = () => {
   }
 
 
-  
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        
+
         <View style={styles.backgroundView}></View>
 
         <View style={styles.screen}>
           <View style={styles.screenTop}>
-            {screen === "Edit" ? ScreenTitle("", "close") : ScreenTitle("Personal Data", "arrow-back-ios")}
+            {screen === "Edit" ? ScreenTitle("", "close") : ScreenTitle("", "")}
           </View>
           <View style={styles.screenContent} >
             {screen === "Profile" ? ProfileScreen() : EditScreen()}
           </View>
         </View>
-        
+
       </View>
     </SafeAreaView>
   )
@@ -213,7 +214,7 @@ export default PersonalData
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
+    //marginTop: StatusBar.currentHeight || 0,
   },
   container: {
     flex: 1
@@ -234,12 +235,12 @@ const styles = StyleSheet.create({
     padding: 20
   },
   screenTop: {
-    height: "5%", 
+    height: "5%",
     width: "100%",
     alignItems: "center",
   },
   screenContent: {
-    height: "95%", 
+    height: "95%",
     width: "100%",
     alignItems: "center",
     justifyContent: "space-around",
@@ -249,7 +250,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium,
   },
   avatar:{
-    height: "30%", 
+    height: "30%",
     width: "100%",
     alignItems: "center",
     justifyContent: "space-between",
@@ -262,30 +263,30 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   list: {
-    width: "100%", 
+    width: "100%",
     backgroundColor: COLORS.white,
     borderRadius: 20,
     alignItems: "center",
   },
   screenBottom: {
-    height: "10%", 
-    width: "100%", 
+    height: "10%",
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
   },
   listItem: {
     height: 60,
-    width: "80%", 
+    width: "80%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
   editScreenTop:{
-    height: "20%", 
+    height: "20%",
     width: "100%",
   },
   editScreenBottom:{
-    height: "80%", 
+    height: "80%",
     width: "100%",
     alignItems: "center",
   },
@@ -293,7 +294,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   editContainer: {
-    height: "100%", 
+    height: "100%",
     width: "100%",
     alignItems: "center",
   },
@@ -322,9 +323,9 @@ const styles = StyleSheet.create({
     color: "#ABABAB"
   },
   addAvatar: {
-    backgroundColor: "white", 
+    backgroundColor: "white",
     borderRadius:10,
-    width: 40, 
+    width: 40,
     height: 40,
     alignItems: "center",
     justifyContent: "center",
@@ -332,5 +333,5 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 20,
   }
-  
+
 })
