@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
   },
   middle: {
     height: "100%",
-    padding: 10
   },
   card: {
     height: 144,
@@ -99,7 +98,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 10,
     backgroundColor: "white",
-    marginVertical: 10
+    marginVertical: 10,
+    marginLeft: 5
   },
   urlView: {
     height: "100%",
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   bottomView: {
     width: "100%",
     position: "absolute",
-    bottom: 10,
+    bottom: 0,
     paddingVertical: SIZES.font,
     justifyContent: "center",
     alignItems: "center",

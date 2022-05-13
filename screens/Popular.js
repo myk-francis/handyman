@@ -78,10 +78,11 @@ const styles = StyleSheet.create({
   },
   middle: {
     height: "100%",
-    padding: 10
+    
   }, 
   headerContainer: {
     backgroundColor: "white",
+    padding: 10
   },
   textView: {
     marginVertical: 5,
@@ -108,8 +109,8 @@ const styles = StyleSheet.create({
 
   personCard: {
     height: 195,
-    width: 175,
-    marginVertical: 10
+    width: 200,
+    padding: 10
   },
   personUrlBackground: {
     width: "100%",

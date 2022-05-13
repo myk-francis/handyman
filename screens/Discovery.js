@@ -7,7 +7,7 @@ const Discovery = ({categories}) => {
   const ListItem = (item) => { 
     if (item.title === "Stories") {
       return(
-        <View style={[styles.storiesCard, item.id > 1 && { marginLeft: 10 }]}>
+        <View style={[styles.storiesCard, item.id > 1 && { }]}>
           <ImageBackground source={{ uri: item.uri}} resizeMode="cover" style={styles.storiesUrlBackground}>
             <Text style={styles.storiesCaption}>{item.caption}</Text>
             <Text style={styles.storiesSubCaption}>{item.subCaption}</Text>
@@ -16,7 +16,7 @@ const Discovery = ({categories}) => {
       )
     } else if (item.title === "Popular") {
       return(
-        <View style={[styles.popCard, item.id > 1 && { marginLeft: 10 }]}>
+        <View style={[styles.popCard, item.id > 1 && { }]}>
           <ImageBackground source={{ uri: item.uri}} resizeMode="cover" style={styles.popUrlBackground}>
             <Text style={styles.popCaption}>{item.name}</Text>
             <Text style={styles.popPrice}>{item.price}</Text>
@@ -25,7 +25,7 @@ const Discovery = ({categories}) => {
       )
     } else {
       return(
-        <View style={[styles.personCard, item.id > 1 && { marginLeft: 10 }]}>
+        <View style={[styles.personCard, item.id > 1 && {  }]}>
           <Image source={{ uri: item.uri}} resizeMode="cover" style={styles.personUrlBackground}></Image> 
           <Text style={styles.personCaption}>{item.name}</Text>
           <Text style={styles.personPrice}>{item.price}</Text>
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   
   middle: {
     height: "100%",
-    padding: 10
+    
   }, 
   storiesView: {
     height: 200,
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   storiesCard: {
     height: 170,
     width: 300,
+    padding: 5
   },
   storiesUrlBackground: {
     width: "100%",
@@ -160,6 +161,7 @@ const styles = StyleSheet.create({
   popCard: {
     height: 360,
     width: 300,
+    padding: 5
   },
   popUrlBackground: {
     width: "100%",
@@ -191,6 +193,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     height: 30,
     width: "100%",
+    marginLeft: 10
   },
   sectionTitleText: {
     fontWeight: "bold",
@@ -199,6 +202,7 @@ const styles = StyleSheet.create({
   personCard: {
     height: 170,
     width: 150,
+    padding: 5
   },
   personUrlBackground: {
     width: "100%",

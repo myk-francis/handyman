@@ -29,7 +29,7 @@ function HomeScreens() {
       <Stack.Screen name="GoalsHome" component={GoalsHome}/>
       <Stack.Screen name="StartPage" component={StartPage}/>
       <Stack.Screen name="AuthScreen" component={AuthScreen}/>
-      <Stack.Screen name="Profile" presentation="card" component={Profile}/>
+      <Stack.Screen name="Profile" component={Profile}/>
     </Stack.Navigator>
   )
 }
@@ -124,7 +124,7 @@ function MyDrawer() {
         options={{ 
           title: '', //Set Header Title
           headerStyle: {
-            backgroundColor: 'white', //Set Header color
+            backgroundColor: 'white', //Set Header 
           },
           headerTintColor: '#fff', //Set Header text color
           headerTitleStyle: {
@@ -227,7 +227,7 @@ const App = () => {
     InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
     InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
     InterLight: require("./assets/fonts/Inter-Light.ttf"),
-  });
+  })
 
   if (!loaded) return null;
 
